@@ -4,8 +4,13 @@ library(tidyr)
 covid19Timeseries = fread("~/GitHub/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv")
 
 
+<<<<<<< Updated upstream
 italy = covid19Timeseries[`Country/Region` == "Italy", -c(1:4)] %>% colSums
 usa = covid19Timeseries[`Country/Region` == "US", -c(1:4)] %>% colSums
+=======
+italy = colSums(covid19Timeseries[`Country/Region` == "Italy", -c(1:4)])
+usa = colSums(covid19Timeseries[`Country/Region` == "US", -c(1:4)])
+>>>>>>> Stashed changes
 
 days = 1:58
 
